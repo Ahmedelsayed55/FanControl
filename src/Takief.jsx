@@ -57,11 +57,14 @@ export default function Takief() {
       }}
       className=" h-dvh flex flex-col items-center py-11 gap-10 transition-all duration-500"
     >
-      <img
+      <motion.img
+         initial ={{  opacity: 0, y: -70}}
+        whileInView={{y: 0, opacity: 1}}
+             transition={{ delay: 0, duration: 0.6 }}
         src={tak}
         className={`shadow-2xl w-3/4 md:w-2/5 ${
           !hot ? "shadow-blue-600" : "shadow-red-600"
-        } rounded-[3rem] transition-all duration-700`}
+        } rounded-[3rem] transition-all duration-200`}
         alt=""
       />
       <div className="flex flex-col w-2xs border-2 gap-15 border-black shadow-2xl shadow-green-50 rounded-4xl px-10 py-5">
@@ -85,7 +88,6 @@ export default function Takief() {
           </motion.button>
         </div>
         <motion.button 
-       
         whileTap={{ scale: .5  }}
         onClick={toggleFan} className={`p-4 bg-amber-400 flex justify-center text-3xl rounded-4xl ${!fanState ? "bg-red-400 text-red-800" : "bg-amber-700 text-yellow-300"} transition  duration-200`}>
          <FaPowerOff />
