@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 export default function App() {
   return (
-    <div className="bg-gray-950">
+    <div className="">
       <BrowserRouter>
       <Nav/>
         <Routes>
