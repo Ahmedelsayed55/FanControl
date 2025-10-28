@@ -58,7 +58,7 @@ export default function Takief() {
     >
       <img
         src={tak}
-        className={`shadow-2xl w-2/5 ${
+        className={`shadow-2xl w-3/4 md:w-2/5 ${
           !hot ? "shadow-blue-600" : "shadow-red-600"
         } rounded-[3rem] transition-all duration-700`}
         alt=""
