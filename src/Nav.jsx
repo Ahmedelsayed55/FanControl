@@ -6,7 +6,7 @@ export default function Nav() {
     <div className='dark:bg-[#776205fd] py-5 dark:text-white border-b-2 border-gray-700 '>
         <nav className='container mx-auto flex justify-between'>
             <Link to="/">علي التكيف احسن من المروحه </Link>
-            <Link to="/fan">لا ياعم الجو ساقعه المروحه احسن </Link>
+            <Link to="/fan">طب ماتيجي نشوف المروحه</Link>
         </nav>
     </div>
   )
