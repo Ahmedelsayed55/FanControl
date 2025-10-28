@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "motion/react"
 import { FaPowerOff } from "react-icons/fa";
 import { HiPlusSm } from "react-icons/hi";
 import { TiMinus } from "react-icons/ti";
@@ -72,16 +73,23 @@ export default function Takief() {
           </div>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <button onClick={increment} className="p-3 bg-amber-400 flex justify-center text-3xl rounded-3xl">
+          <motion.button 
+          whileTap={{ scale: 0.5,  }}
+          onClick={increment} className="p-3 bg-amber-400 flex justify-center text-3xl rounded-3xl">
             <HiPlusSm /><span className="text-[1rem]">°C</span>
-          </button>
-          <button onClick={decrement} className="p-3 bg-amber-400 flex justify-center text-3xl rounded-3xl">
+          </motion.button>
+          <motion.button 
+          whileTap={{ scale: 0.5,  }}
+          onClick={decrement} className="p-3 bg-amber-400 flex justify-center text-3xl rounded-3xl">
            <TiMinus /><span className="text-[1rem]">°C</span>
-          </button>
+          </motion.button>
         </div>
-        <button onClick={toggleFan} className={`p-4 bg-amber-400 flex justify-center text-3xl rounded-4xl ${!fanState ? "bg-red-400 text-red-800" : "bg-amber-700 text-yellow-300"} transition  duration-300`}>
+        <motion.button 
+       
+        whileTap={{ scale: .5  }}
+        onClick={toggleFan} className={`p-4 bg-amber-400 flex justify-center text-3xl rounded-4xl ${!fanState ? "bg-red-400 text-red-800" : "bg-amber-700 text-yellow-300"} transition  duration-200`}>
          <FaPowerOff />
-        </button>
+        </motion.button>
       </div>
     </div>
   );
