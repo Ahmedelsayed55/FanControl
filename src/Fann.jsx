@@ -28,7 +28,7 @@ export default function Fann() {
         className="w-2/12 "
         animate={{ rotate: isAnimating && fanSpeed >= 1 ? 360 * fanSpeed : 0  }}
         transition={{
-          duration: fanSpeed === 3 ? 0.2 : fanSpeed === 2 ? 0.3 : 1,
+          duration: 0.5 ,
           ease: "linear",
           repeat: isAnimating && fanSpeed >= 1 ? Infinity : 0,
         }}
@@ -36,18 +36,20 @@ export default function Fann() {
       <h1>
         {fanSpeed} {isAnimating ? "on" : "off"}
       </h1>
-      <button
-        className="mt-6 bg-amber-400 px-5 py-2 rounded-xl"
+      <motion.button
+      whileTap={{scale:0.8}}
+        className="mt-6 bg-amber-400 cursor-pointer px-5 py-2 rounded-xl"
         onClick={increment}
       >
         Fan Speed
-      </button>
-      <button
+      </motion.button>
+      <motion.button
+       whileTap={{scale:0.9}}
         onClick={toggleAnimation}
-        className="mt-6 bg-amber-400 px-5 py-2 rounded-xl"
+        className="mt-6 bg-amber-400 px-7 cursor-pointer py-2 rounded-xl"
       >
         {isAnimating ? "End" : "Start"}
-      </button>
+      </motion.button>
     </div>
   );
 }
